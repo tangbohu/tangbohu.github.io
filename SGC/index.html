@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Signature of Geometric Centroids
+</title>
+<link href="./images/external.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+<div id="wrapper">
+        <div id="content"> 
+            
+          <!-- Title & Authors-->
+          <br><br>
+          <p class="title"> Signature of Geometric Centroids<br> for 3D Local Shape Description and Partial Shape Matching
+</p>
+          <p>&nbsp;</p>
+          
+          <p class="authors">
+          Keke Tang &nbsp&nbsp
+          <a href="https://songpenghit.github.io">Peng Song</a> &nbsp&nbsp  
+          <a href="http://ai.ustc.edu.cn/en/people/xpchen.php">Xiaoping Chen</a><br><br>
+          <!--<sup>1</sup>University of Science and Technology of China<br>
+          <sup>2</sup>Nanyang Technological University, Singapore<br><br>-->
+          <strong>The 13th Asian Conference on Computer Vision (ACCV 2016) </strong></p>
+          <p class="authors">&nbsp;</p>
+          
+          <!-- Figure 1: Overview-->
+          <br><br>
+          <div align="center">
+          <img src="./images/desc_constru.png" width="800" alt="Figure 1">
+          </div>
+          <p class="figure"><strong>Figure 1:</strong> Constructing an SGC descriptor. (a) Construct a unique LRF from a spherical support centered at a feature point (in pink); (b) segment a cubical support centered at the feature point and aligned with the LRF; (c) voxelize the support and extract centroid features from non-empty voxels; the centroid color indicates point density in the voxel, where small and large densities are colored in blue and red respectively.</p>
+          
+          <!-- Abstract -->
+          <p class="text"><strong>Abstract:</strong></p>
+          <p class="text">Depth scans acquired from different views may contain nuisances such as noise, occlusion, and varying point density. We propose a novel Signature of Geometric Centroids descriptor, supporting direct shape matching on the scans, without requiring any preprocessing such as scan denoising or converting into a mesh. First, we construct the descriptor by voxelizing the local shape within a uniquely defined local reference frame and concatenating geometric centroid and point density features extracted from each voxel. Second, we compare two descriptors by employing only corresponding voxels that are both non-empty, thus supporting matching incomplete local shape such as those close to scan boundary. Third, we propose a descriptor saliency measure and compute it from a descriptor-graph to improve shape matching performance. We demonstrate the descriptor's robustness and effectiveness for shape matching by comparing it with three state-of-the-art descriptors, and applying it to object/scene reconstruction and 3D object recognition.
+          </p>
+          
+          <!-- Paper -->
+          <p class="text">&nbsp;</p>
+          <p class="text"><strong>Paper:</strong><br>
+          original conference version <a href="./download/2016-ACCV-SGC.pdf">download</a><br>
+          extended journal version <a href="./download/2017-Access-3DObjectRecognition.pdf">download </a><br>
+          source code for SGC and our shape matching framework <a href="./download/SurfaceMatcher.zip">download </a> <br> <font color="red">The code is provided for academic use only.
+          If you're going to use this code, please cite both papers at the bottom of this page.</font> <br> 
+
+          
+          <!-- Images of Results -->  
+          <p class="text">&nbsp;</p>
+          <p class="text"><strong>Images:</strong></p>
+          <p class="text">&nbsp;</p>
+          
+          <br>
+          <div align="center"><img src="./images/match_pipeline.png" width="900" alt="Figure 2"></div>
+          <p class="figure"><strong>Figure 2:</strong> Matching two scans using SGC descriptors: (a) sampled feature points (in
+purple) on two input scans (only part of samples are shown for clarity); (b) calculated
+LRFs and descriptors; (c) a pair of matched descriptors; (d) match the two scans based
+on aligning the associated LRFs; and (e) rene the scan alignment using ICP.</p>
+          
+          <br>
+          <div align="center"><img src="./images/match_boundary.png" width="600" alt="Figure 3"></div>
+          <p class="figure"><strong>Figure 3:</strong> (left) Match a support containing holes (in gray scan) with a support close to boundary (in cyan scan) using SGC descriptors; (right) aligned scans and supports.</p>
+          
+          <br>
+          <div align="center"><img src="./images/desc_graph.png" width="500" alt="Figure 4"></div>
+          <p class="figure"><strong>Figure 4:</strong> An example descriptor-graph (outdegree = 3 for every node).</p>
+          
+          <br>
+          <div align="center"><img src="./images/app_reconstru.png" width="700" alt="Figure 5"></div>
+          <p class="figure"><strong>Figure 5:</strong> Our reconstruction results. (a) Super Mario; (b) Frog; and (c) Stage scene.</p>
+          
+   
+          
+          
+        <!-- Acknowledgments -->  
+        <p class="text"><strong>Acknowledgments:</strong></p>
+        <p class="text">This work is supported in part by the Fundamental Research Funds for the Central Universities (WK0110000044), Anhui Provincial Natural Science Foundation (1508085QF122), National Natural Science Foundation of China (61403357, 61175057), and Microsoft Research Asia Collaborative Research Program.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        
+        <!-- Bibtex -->  
+        <p class="text"><strong>Bibtex:</strong><br>
+        @article {Tang-2016-SGC,          </p>
+        <p class="text">title = {Signature of Geometric Centroids for 3D Local Shape Description and Partial Shape Matching},              </p>
+        <p class="text">author = {Keke Tang and Peng Song and Xiaoping Chen}, </p>
+        <p class="text">booktitle={Asian Conference on Computer Vision},</p>
+        <p class="text">pages={311--326}, </p>
+        <p class="text">year = {2016},</p>
+        <p class="text"> }</p>
+        <p class="text">&nbsp;</p>
+
+
+        <p class="text">@article {Tang-2017-SGCRec,          </p>
+        <p class="text">title = {Signature of Geometric Centroids for 3D Local Shape Description and Partial Shape Matching},              </p>
+        <p class="text">author = {Keke Tang and Peng Song and Xiaoping Chen}, </p>
+        <p class="text">journal={IEEE Access},</p>
+        <p class="text">volume={5},</p>
+        <p class="text">pages={1833--1845},</p>
+        <p class="text"> year={2017},</p>
+        <p class="text"> }</p>
+        <p class="text">&nbsp;</p>
+        <p class="text">&nbsp;</p>
+        <p class="text">&nbsp;</p>
+        <p class="text">&nbsp;</p>
+
+        </div>
+              
+</div>
+
+
+</body></html>
